@@ -66,12 +66,12 @@ class Ball:
             self.canvas.delete(self.id_2)
             self.ans = self.ans + 1
             self.id_2 = self.canvas.create_text(250, 10, text=self.ans)
-        if self.ans == 3 or self.ans == 10:
-            ans = True
-            if ans:
-                self.x += 10
-                self.y += 10
-                ans = False
+        if self.ans == 3:
+            self.x = 10
+            self.y = 10
+        if self.ans == 10:
+            self.x = 15
+            self.y = 15
 
     def fix(self, diff_x, diff_y):
         self.canvas.move(self.id, -(diff_x * 2), -(diff_y * 2))
