@@ -1,1 +1,3 @@
-# Programming Training 1 の課題
+# Programming Training 1の課題
+#スコアの表示
+#game over の表示
