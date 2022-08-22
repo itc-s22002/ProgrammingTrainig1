@@ -30,7 +30,7 @@ class Ball:
             return
         self.ans = 0
         self.canvas.moveto(self.id, self.init_x, self.init_y)
-        self.speed = 10
+        self.speed = 5
 
         angle = math.radians(random.choice(list(range(20, 65, 5))))
         direction = random.choice([1, -1])
@@ -66,6 +66,12 @@ class Ball:
             self.canvas.delete(self.id_2)
             self.ans = self.ans + 1
             self.id_2 = self.canvas.create_text(250, 10, text=self.ans)
+        if self.ans == 3 or self.ans == 10:
+            ans = True
+            if ans:
+                self.x += 10
+                self.y += 10
+                ans = False
 
     def fix(self, diff_x, diff_y):
         self.canvas.move(self.id, -(diff_x * 2), -(diff_y * 2))
